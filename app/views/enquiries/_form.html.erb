@@ -1,0 +1,38 @@
+<h1>Enquiring for 
+			<% if @docter.nil? %>
+	        <%= @hospital.name %> 
+	        <% elsif @hospital.nil? %>
+	        <%= @docter.name %>
+	        <% end %> </h1>
+  <%= form_for(@enquiry) do |f| %>
+  
+ 
+   <p>
+    <%= f.label       :name %><br />
+    <%= f.text_field  :name  %>
+  </p>
+   <p>
+    <%= f.label       :email %><br />
+    <%= f.text_field  :email  %>
+  </p>
+  <p>
+    <%= f.label       :phone_no %><br />
+    <%= f.text_field  :phone_no  %>
+  </p>  
+  <p>
+  	 <%= f.label       :message %><br />
+     <%= f.text_area   :message  %>
+  </p>  
+<% if @docter.nil? %>
+<%= f.hidden_field :hospital_id, :value => @hospital.user_id %>
+<%= f.hidden_field :user_email, :value => @hospital.user.email %>
+<% elsif @hospital.nil? %>
+<%= f.hidden_field :docter_id, :value => @docter.user_id%>
+<%= f.hidden_field :user_email, :value => @docter.user.email %>
+<% end %>
+
+
+   <p>
+    <%= f.submit "Create" %>
+  </p>
+  <% end %>

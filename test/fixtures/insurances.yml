@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type_insurance: MyString
+  comp_name: MyString
+  plan_name: MyString
+  plan_id: MyString
+  group_no: MyString
+  card_name: MyString
+  policy_id: MyString
+  insure_phone: MyString
+  start_date: 2012-03-14
+  end_date: 2012-03-14
+  journal_entry: MyText
+  user_id: 1
+
+two:
+  type_insurance: MyString
+  comp_name: MyString
+  plan_name: MyString
+  plan_id: MyString
+  group_no: MyString
+  card_name: MyString
+  policy_id: MyString
+  insure_phone: MyString
+  start_date: 2012-03-14
+  end_date: 2012-03-14
+  journal_entry: MyText
+  user_id: 1

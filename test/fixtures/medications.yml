@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  medication: MyString
+  take_medi: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  route: MyString
+  strength: MyString
+  how_many: MyString
+  how_often: MyString
+  journal_entry: MyText
+  user_id: 1
+
+two:
+  medication: MyString
+  take_medi: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  route: MyString
+  strength: MyString
+  how_many: MyString
+  how_often: MyString
+  journal_entry: MyText
+  user_id: 1

@@ -1,0 +1,24 @@
+<h1>Listing categories_ds</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+   
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories_ds.each do |categories_d| %>
+  <tr>
+    <td><%= categories_d.name %></td>
+    
+    <td><%= link_to 'Show', categories_d %></td>
+    <td><%= link_to 'Edit', edit_categories_d_path(categories_d) %></td>
+    <td><%= link_to 'Destroy', categories_d, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Categories d', new_categories_d_path %>

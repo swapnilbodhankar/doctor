@@ -1,0 +1,9 @@
+<div class=”city”>
+<% f.fields_for :cities, city_form, :child_index => (child_index rescue nil) do |cf|%>
+<p>
+<%= cf.label :city_name %>
+<%= cf.text_field :city_name %>
+</p>
+
+<% end %>
+</div>

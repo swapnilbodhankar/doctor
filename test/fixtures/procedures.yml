@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  surgery: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  journal_entry: MyText
+  user_id: 1
+
+two:
+  surgery: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  journal_entry: MyText
+  user_id: 1

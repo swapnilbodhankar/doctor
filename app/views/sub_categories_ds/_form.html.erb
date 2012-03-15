@@ -1,0 +1,27 @@
+<%= form_for(@sub_categories_d) do |f| %>
+  <% if @sub_categories_d.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sub_categories_d.errors.count, "error") %> prohibited this sub_categories_d from being saved:</h2>
+
+      <ul>
+      <% @sub_categories_d.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+   <p><%= f.label       :Select_Category %></p>
+     <% for categories_d in CategoriesD.find(:all) %>
+              <%= radio_button_tag "sub_categories_d[categories_d_ids][]", categories_d.id, @sub_categories_d.categories_ds.include?(categories_d) %>
+              <%= categories_d.name %>
+     <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

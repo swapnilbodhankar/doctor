@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  immu_name: MyString
+  date: 2012-03-14
+  journal_entry: MyText
+  user_id: 1
+
+two:
+  immu_name: MyString
+  date: 2012-03-14
+  journal_entry: MyText
+  user_id: 1
