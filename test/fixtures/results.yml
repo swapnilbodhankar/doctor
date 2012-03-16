@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  test_name: MyString
+  final_result: MyString
+  unit: MyString
+  date_test: 2012-03-14
+  goal: MyString
+  per_entry: MyString
+  journal_entry: MyString
+  user_id: 1
+
+two:
+  test_name: MyString
+  final_result: MyString
+  unit: MyString
+  date_test: 2012-03-14
+  goal: MyString
+  per_entry: MyString
+  journal_entry: MyString
+  user_id: 1

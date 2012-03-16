@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  symptom: MyString
+  problem: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  journal_entry: MyText
+  user_id: 1
+
+two:
+  symptom: MyString
+  problem: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  journal_entry: MyText
+  user_id: 1

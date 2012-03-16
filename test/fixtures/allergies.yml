@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  allergic: MyString
+  affect: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  severity: MyString
+  journal_entry: MyText
+  user_id: 1
+
+two:
+  allergic: MyString
+  affect: MyString
+  started: 2012-03-14
+  ended: 2012-03-14
+  severity: MyString
+  journal_entry: MyText
+  user_id: 1

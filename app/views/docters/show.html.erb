@@ -1,0 +1,40 @@
+<h1>Dr.   <%= @docter.name %> (<%= @docter.qualification %>)</h1>
+<p>
+  <b>Name:</b>
+  <%= @docter.name %>
+</p>
+<p>
+  <b>Address:</b>
+  	<%= @docter.address_line1%>
+   	<%= @docter.address_line2%>
+    <%= @docter.address_line3%>
+</p>
+<p>
+  <b>Contact No:</b>
+  <%= @docter.contact_no%>
+</p>
+<p>
+  <b>Fax No:</b>
+  <%= @docter.fax_no  %>
+</p>
+<p>
+  <b>website_url:</b>
+  <%= @docter.website_url %>
+</p>
+<p>
+  <b>Qualification:</b>
+  <%= @docter.qualification  %>
+</p>
+<p>
+  <b>Speciality:</b>
+  <%= @docter.speciality  %>
+</p>
+<p>
+  <b>Awards:</b>
+  <%= @docter.awards  %>
+</p>
+<p>
+  <b>Category:</b>
+  <%= @docter.categories_ds.name  %>
+</p>
+<%= render "enquiries/form", :object => @docter %>

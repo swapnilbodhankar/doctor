@@ -1,0 +1,32 @@
+<h1>Hospital Profile</h1>
+<p>
+<b>Name:</b>
+<%= @hospital.name %>
+</p>
+<p><b>Address:</b>
+	<%= @hospital.address_line1 %></br>
+	<%= @hospital.address_line2 %></br>
+	<%= @hospital.address_line3 %></br>
+</p>
+<p><b>Emergency Services:</b>
+	<%= @hospital.emergency_service %>
+</p>
+<p><b>Ambulance Contact:</b>
+	<%= @hospital.ambulance_contact %>
+</p>
+<p><b>Pharmacy Details:</b>
+	<%= @hospital.pharmacy_details %>
+</p>
+<p><b>Number Of Private Rooms:</b>
+	<%= @hospital.no_of_private_room %>
+</p>
+<p><b>Number of Wards:</b>
+	<%= @hospital.no_of_wards %>
+</p>
+<p><b>Specialities:</b>
+	<%= @hospital.specialities %>
+</p>
+<p><b>Doctor List:</b>
+	<%= @hospital.doctor_list %>
+</p>
+<%= render "enquiries/form" , :object => @hospital %>

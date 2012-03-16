@@ -1,0 +1,61 @@
+
+
+<%= form_for(@docter) do |f| %>
+
+
+  <p>
+    <%= f.label       :name %><br />
+    <%= f.text_field  :name %>
+  </p>
+  <p>
+    <%= f.label       :address %><br />
+    <%= f.text_field  :address_line1 %><br />
+    <%= f.text_field  :address_line2 %><br />
+    <%= f.text_field  :address_line3 %>
+  </p>
+ 
+
+
+
+   <p>
+    <%= f.label       :contact_no %><br />
+    <%= f.text_field  :contact_no  %>
+  </p>
+   <p>
+    <%= f.label       :fax_no %><br />
+    <%= f.text_field  :fax_no  %>
+  </p>
+    <p>
+    <%= f.label       :website_url %><br />
+    <%= f.text_field  :website_url  %>
+  </p>  
+  <p>
+    <%= f.label       :qualification %><br />
+    <%= f.text_field  :qualification  %>
+  </p>
+    <p>
+    <%= f.label       :speciality%><br />
+    <%= f.text_field  :speciality  %>
+  </p>
+    <p>
+    <%= f.label       :affiliation %><br />
+    <%= f.text_field  :affiliation  %>
+  </p>
+    <p>
+    <%= f.label       :awards %><br />
+    <%= f.text_field  :awards  %>
+  </p>
+     <p>
+    <%= f.label       :Select_Categories %></p>
+    <%  for categories_d in CategoriesD.find(:all) %>
+    <%= radio_button_tag "docter[categories_d_ids][]",categories_d.id, @docter.categories_ds.include?(categories_d) %>
+    <%= categories_d.name %>
+    <% end %> 
+  <p> 
+   
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>

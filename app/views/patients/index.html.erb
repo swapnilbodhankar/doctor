@@ -1,0 +1,3 @@
+<h1>Welcome patient</h1>
+<%= link_to 'Profile', {:action=>"show", :controller=>"patients", :id=>"#{current_user.id}"} %>
+<%=link_to 'Edit Profile', {:action=>"edit", :controller=>"patients", :id=>"#{current_user.id}"} %>
