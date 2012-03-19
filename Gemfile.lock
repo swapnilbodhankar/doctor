@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/madebydna/nested_form.git
-  revision: bce54d4741ef698de7bcdc97cb86010812dbf81f
+  remote: https://github.com/ryanb/nested_form.git
+  revision: 486e0f0e93f3ca455d5d0fc7869053257b6afce2
   specs:
-    nested_form (0.0.0)
+    nested_form (0.2.0)
 
 GEM
   remote: http://rubygems.org/

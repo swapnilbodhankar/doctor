@@ -19,13 +19,14 @@
 
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
- <%= f.fields_for :allergy do |bud| %>
- <%= render "allergy", :f => bud %>
- 
- <% end %>
-   <%= add_child_link "Add allergy", :allergy %></p>
- <p>
 
+ <h3> allergies</h3>
+	<%= f.fields_for :allergy do |t| %>
+	<%= t.label :name %><br />
+	<%= t.text_field :name %><br />
+	<%= t.link_to_remove "Remove this task" %>
+	<% end %>
+<p><%= f.link_to_add "Add a task", :allergies %></p>
 
 <%= f.submit "Create" %>
 <% end %>

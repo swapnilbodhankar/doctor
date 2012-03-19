@@ -1,8 +1,9 @@
 class PatientsController < ApplicationController
-  include PatientsHelper
+  
   def new
     @patient = Patient.new
     allergy = @patient.allergies
+    
 
   end
 
