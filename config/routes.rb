@@ -2,6 +2,10 @@ Doctor::Application.routes.draw do
 
 
 
+  resources :states
+
+  resources :countries
+
   # welcome screen
   root :to => "home#index"
 
@@ -19,7 +23,6 @@ Doctor::Application.routes.draw do
        resources  :hospitals
     match '/dashboard'  => "home#new", :as => :root
    end
- 
 
 
 end

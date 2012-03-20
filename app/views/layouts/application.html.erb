@@ -3,9 +3,11 @@
 <head>
   <title>Doctor</title>
   <%= stylesheet_link_tag    "application" %>
-	<%= javascript_include_tag  'nested_form' %>
-	
+<%= javascript_include_tag 'jquery', 'nested_form' %>
 
+
+	
+<%= yield(:head)%>
 
   <%= csrf_meta_tags %>
 </head>

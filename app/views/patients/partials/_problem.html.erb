@@ -1,0 +1,24 @@
+
+
+
+<p>
+  <%= f.label :symptom %> <br />
+  <%= f.text_field :symptom %><br />
+</p>
+p>
+  <%= f.label :problem %> <br />
+  <%= f.text_field :problem %><br />
+</p>
+<p>
+  <%= f.label :started %> <br />
+  <%= f.date_select :started %><br />
+</p>
+<p>
+  <%= f.label :ended %><br />
+  <%= f.date_select  :ended %><br />
+</p>
+<p>
+  <%= f.label :journal_entry %> <br />
+  <%= f.text_area  :journal_entry %><br />
+</p>
+<%= f.hidden_field :user_id, :value => current_user.id %>

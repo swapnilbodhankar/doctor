@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120314091722) do
+ActiveRecord::Schema.define(:version => 20120314092308) do
 
   create_table "allergies", :force => true do |t|
     t.string   "allergic"
@@ -123,6 +123,21 @@ ActiveRecord::Schema.define(:version => 20120314091722) do
     t.string   "insure_phone"
     t.date     "start_date"
     t.date     "end_date"
+    t.text     "journal_entry"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "medications", :force => true do |t|
+    t.string   "medication"
+    t.string   "take_medi"
+    t.date     "started"
+    t.date     "ended"
+    t.string   "route"
+    t.string   "strength"
+    t.string   "how_many"
+    t.string   "how_often"
     t.text     "journal_entry"
     t.integer  "user_id"
     t.datetime "created_at"

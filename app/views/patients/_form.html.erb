@@ -1,5 +1,5 @@
 
-<%= form_for (@patient) do |f| %>
+<%= nested_form_for @patient do |f|  %>
 
 
 <%= f.label :name %><br />
@@ -19,14 +19,12 @@
 
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
-
  <h3> allergies</h3>
-	<%= f.fields_for :allergy do |t| %>
-	<%= t.label :name %><br />
-	<%= t.text_field :name %><br />
-	<%= t.link_to_remove "Remove this task" %>
+	<%= f.fields_for :allergies do |f| %>
+	<%= render :partial =>'allergy',  :locals => { :f => f }%>
 	<% end %>
-<p><%= f.link_to_add "Add a task", :allergies %></p>
+<p><%= f.link_to_add "Add a allergy", :allergies %></p>
+
 
 <%= f.submit "Create" %>
 <% end %>

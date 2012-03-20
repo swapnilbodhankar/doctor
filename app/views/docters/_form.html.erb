@@ -1,5 +1,6 @@
 
 
+<%= javascript 'dynamic_states' %>
 <%= form_for(@docter) do |f| %>
 
 
@@ -14,8 +15,14 @@
     <%= f.text_field  :address_line3 %>
   </p>
  
-
-
+<p>
+ 
+  <%= f.collection_select :countries_id, Country.find(:all), :name, :prompt => "Select a Country" %>
+</p>
+<p>
+ 
+  <%= f.collection_select :states_id, State.find(:all), :name, :prompt => "Select a State" %>
+</p>
 
    <p>
     <%= f.label       :contact_no %><br />

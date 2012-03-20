@@ -1,9 +1,12 @@
-
 <p>
-  <%= f.label :surgery %> <br />
-  <%= f.text_field :surgery %><br />
+  <%= f.label :allergic_to  %> <br />
+  <%= f.text_field :allergic  %><br />
 </p>
 
+<p>
+  <%= f.label :affect %> <br />
+  <%= f.text_field :affect %><br />
+</p>
 
 <p>
   <%= f.label :started %> <br />
@@ -12,6 +15,11 @@
 <p>
   <%= f.label :ended %><br />
   <%= f.date_select  :ended %><br />
+</p>
+
+<p>
+  <%= f.label :severity %><br />
+  <%= f.text_field  :severity %><br />
 </p>
 
 <p>

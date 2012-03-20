@@ -2,8 +2,6 @@
 
 one:
   name: MyString
-  country_id: 1
 
 two:
   name: MyString
-  country_id: 1

@@ -3,7 +3,14 @@ class PatientsController < ApplicationController
   def new
     @patient = Patient.new
     allergy = @patient.allergies
-    
+    immunization = @patient.immunizations
+    insu = @patient.insurances
+    problem = @patient.problems
+    procedure = @patient.procedures
+    result = @patient.results
+    medication = @patient.medications
+    #@patient = Patient.find_by_user_id(params[:id])
+    #@patient.allergies.build
 
   end
 
