@@ -1,0 +1,18 @@
+<% for pro in @patient.procedures%>
+<p>
+<b>Surgery</b>
+<%= h pro.surgery %>
+</p>
+<p>
+<b>Started:</b>
+<%= h pro.started %>
+</p>
+<p>
+<b>Ended:</b>
+<%= h pro.ended %>
+</p>
+<p>
+<b>Journal Entry:</b>
+<%= h pro.journal_entry %>
+</p>
+<% end %>

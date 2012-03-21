@@ -1,0 +1,30 @@
+<% for r in @patient.results%>
+<p>
+<b>Test name:</b>
+<%= h r.test_name %>
+</p>
+<p>
+<b>Final Result:</b>
+<%= h r.final_result %>
+</p>
+<p>
+<b>Unit:</b>
+<%= h r.unit %>
+</p>
+<p>
+<b>Date Test:</b>
+<%= h r.date_test %>
+</p>
+<p>
+<b>Goal:</b>
+<%= h r.goal %>
+</p>
+<p>
+<b>Per Entry:</b>
+<%= h r.per_entry %>
+</p>
+<p>
+<b>Journal Entry:</b>
+<%= h r.journal_entry %>
+</p>
+<% end %>

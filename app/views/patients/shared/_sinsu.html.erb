@@ -1,0 +1,45 @@
+<% for insu in @patient.insurances%>
+<p>
+<b>Insurance Type:</b>
+<%= h insu.type_insurance %>
+</p>
+<p>
+<b>Company Name:</b>
+<%= h insu.comp_name %>
+</p>
+<p>
+<b>Plan Name:</b>
+<%= h insu.plan_name %>
+</p>
+<p>
+<b>Plan Id:</b>
+<%= h insu.plan_id %>
+</p>
+<p>
+<b>Group No:</b>
+<%= h insu.group_no %>
+</p>
+<p>
+<b>Card Name:</b>
+<%= h insu.card_name %>
+</p>
+<p>
+<b>Policy Id:</b>
+<%= h insu.policy_id %>
+</p>
+<p>
+<b>Insure Phone:</b>
+<%= h insu.insure_phone %>
+</p>
+<p>
+<b>Started:</b>
+<%= h insu.start_date %>
+</p>
+<p>
+<b>Ended:</b>
+<%= h insu.end_date %>
+</p>		
+<b>Journal Entry:</b>
+<%= h insu.journal_entry %>
+</p>
+<% end %>

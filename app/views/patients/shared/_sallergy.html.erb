@@ -1,0 +1,27 @@
+
+<% for allergy in @patient.allergies%>
+<p>
+<b>Allergy:</b>
+<%= h allergy.allergic %>
+</p>
+<p>
+<b>Affect:</b>
+<%= h allergy.affect %>
+</p>
+<p>
+<b>Started:</b>
+<%= h allergy.started %>
+</p>
+<p>
+<b>Ended:</b>
+<%= h allergy.ended %>
+</p>
+<p>
+<b>Severity:</b>
+<%= h allergy.severity %>
+</p>
+<p>
+<b>Journal Entry:</b>
+<%= h allergy.journal_entry %>
+</p>
+<% end %>

@@ -1,0 +1,14 @@
+<% for i in @patient.immunizations%>
+<p>
+<b>Immunization Name:</b>
+<%= h i.immu_name %>
+</p>
+<p>
+<b>Date:</b>
+<%= h i.date %>
+</p>
+<p>
+<b>Journal Entry:</b>
+<%= h i.journal_entry %>
+</p>
+<% end %>

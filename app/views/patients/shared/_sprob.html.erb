@@ -1,0 +1,22 @@
+<% for p in @patient.problems%>
+<p>
+<b>Symptom</b>
+<%= h p.symptom %>
+</p>
+<p>
+<b>Problem</b>
+<%= h p.problem %>
+</p>
+<p>
+<b>Started:</b>
+<%= h p.started %>
+</p>
+<p>
+<b>Ended:</b>
+<%= h p.ended %>
+</p>
+<p>
+<b>Journal Entry:</b>
+<%= h p.journal_entry %>
+</p>
+<% end %>

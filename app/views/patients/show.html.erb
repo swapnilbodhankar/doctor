@@ -2,14 +2,42 @@
 <p><b>Name:</b>
 <%= @patient.name %>
 </p>
+<p>
 <b>Phone Number:</b>
 <%= @patient.phone %>
-</p></br>
+</p>
 <p><b>Address:</b></br>
 	<%= @patient.address_line1 %></br>
 	<%= @patient.address_line2 %></br>
 	<%= @patient.address_line3 %></br>
-</p></br>
+</p>
+<p>
 <b>Suffering From:</b>
 <%= @patient.suffering_from %>
 </p>
+<% if @patient.allergies != nil %>
+<%= render 'patients/shared/sallergy'%>
+<% end %>
+
+<% if @patient.immunizations != nil %>
+<%= render 'patients/shared/simmu'%>
+<% end %>
+<% if @patient.insurances != nil %>
+   <%= render 'patients/shared/sinsu' %> 
+   <% end %>
+   
+   <% if @patient.medications != nil %>
+   <%= render 'patients/shared/smedi' %> 
+   <% end %>
+   
+   <% if @patient.problems != nil %>
+   <%= render 'patients/shared/sprob' %> 
+   <% end %>
+   
+   <% if @patient.procedures != nil %>
+   <%= render 'patients/shared/sproce' %> 
+   <% end %>
+   
+   <% if @patient.results != nil %>
+   <%= render 'patients/shared/sres' %> 
+   <% end %>

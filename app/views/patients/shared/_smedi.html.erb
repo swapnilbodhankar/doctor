@@ -1,0 +1,37 @@
+<% for m in @patient.medications%>
+<p>
+<b>Medication:</b>
+<%= h m.medication %>
+</p>
+<p>
+<b>Medication Taken:</b>
+<%= h m.take_medi %>
+</p>
+<b>Started:</b>
+<%= h m.started %>
+</p>
+<p>
+<b>Ended:</b>
+<%= h m.ended %>
+</p>	
+<p>
+<b>Route:</b>
+<%= h m.route %>
+</p>
+<p>
+<b>Strength:</b>
+<%= h m.strength %>
+</p>
+<p>
+<b>How many:</b>
+<%= h m.how_many %>
+</p>
+<p>
+<b>How often:</b>
+<%= h m.how_often %>
+</p>
+<p>	
+<b>Journal Entry:</b>
+<%= h m.journal_entry %>
+</p>
+<% end %>
