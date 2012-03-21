@@ -2,9 +2,13 @@ class PatientsController < ApplicationController
   
   def new
     @patient = Patient.new
-
-    
-    @patient.allergies.build
+    allergy = @patient.allergies
+    immunization = @patient.immunizations
+    insurance = @patient.insurances
+    problem = @patient.problems
+    procedure = @patient.procedures
+    result = @patient.results
+    medication = @patient.medications
 
   end
 
@@ -13,14 +17,15 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @patient = Patient.find_by_user_id(params[:id])
-   end
+      @patient = Patient.find_by_user_id(params[:id])
+  end
+  
   def edit
-    @patient = Patient.find_by_user_id(params[:id])
+      @patient = Patient.find_by_user_id(params[:id])
   end
   
   def update
-     @patient = Patient.find(params[:id])
+      @patient = Patient.find(params[:id])
       respond_to do |format|
       if @patient.update_attributes(params[:patient])
         format.html { redirect_to patients_path, notice: 'Patient was successfully updated.' }
@@ -31,12 +36,10 @@ class PatientsController < ApplicationController
       end
     end
   end
+  
  def create
-    @patient = Patient.new(params[:patient])
-
-
-
-    respond_to do |format|
+     @patient = Patient.new(params[:patient])
+     respond_to do |format|
       if @patient.save
         flash[:notice] = 'Patient was successfully created.'
         format.html { redirect_to patients_path }

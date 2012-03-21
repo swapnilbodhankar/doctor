@@ -19,11 +19,42 @@
 
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
- <h3> allergies</h3>
-	<%= f.fields_for :allergies, @allergy  do |f| %>
+ <h3> Allergies</h3>
+	<%= f.fields_for :allergies do |f| %>
 	<%= render :partial =>'allergy',  :locals => { :f => f }%>
 	<% end %>
-<p><%= f.link_to_add "Add a allergy", :allergies %></p>
+<p><%= f.link_to_add "Add an allergy", :allergies %></p>
+<h3> Immunizations</h3>
+	<%= f.fields_for :immunizations do |f| %>
+	<%= render :partial =>'immu',  :locals => { :f => f }%>
+	<% end %>
+<p><%= f.link_to_add "Add an immunization", :immunizations %></p>
+<h3> Insurances</h3>
+	<%= f.fields_for :insurances do |f| %>
+	<%= render :partial =>'insu',  :locals => { :f => f }%>
+	<% end %>
+<p><%= f.link_to_add "Add an insurances", :insurances %></p>
+
+<h3> Problems</h3>
+	<%= f.fields_for :problems do |f| %>
+	<%= render :partial =>'problem',  :locals => { :f => f }%>
+	<% end %>
+<p><%= f.link_to_add "Add a problem", :problems %></p>
+<h3> Procedures</h3>
+	<%= f.fields_for :procedures do |f| %>
+	<%= render :partial =>'proce',  :locals => { :f => f }%>
+	<% end %>
+<p><%= f.link_to_add "Add a procedure", :procedures %></p>
+<h3> Results</h3>
+	<%= f.fields_for :results do |f| %>
+	<%= render :partial =>'result',  :locals => { :f => f }%>
+	<% end %>
+<p><%= f.link_to_add "Add a result", :results %></p>
+<h3> Medications</h3>
+	<%= f.fields_for :medications do |f| %>
+	<%= render :partial =>'medi',  :locals => { :f => f }%>
+	<% end %>
+<p><%= f.link_to_add "Add an medication", :medications %></p>
 
 
 <%= f.submit "Create" %>
