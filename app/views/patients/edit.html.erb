@@ -1,22 +1,2 @@
 <h1>Patients#edit</h1>
-<%= form_for(@patient) do |f| %>
-
-
-<%= f.label :name %><br />
-<%= f.text_field :name %><br />
-
-<%= f.label :phone %><br />
-<%= f.text_field :phone %><br />
-
-  <p>
-    <%= f.label       :address %><br />
-    <%= f.text_field  :address_line1 %><br />
-    <%= f.text_field  :address_line2 %><br />
-    <%= f.text_field  :address_line3 %>
-  </p>
-<%= f.label :suffering_from %><br />
-<%= f.text_field :suffering_from %><br />
-      <%= f.hidden_field :user_id, :value => current_user.id %>
-
-<%= f.submit "Create" %>
-<% end %>
+<%= render 'form'%>

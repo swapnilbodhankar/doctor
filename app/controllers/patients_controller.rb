@@ -2,15 +2,9 @@ class PatientsController < ApplicationController
   
   def new
     @patient = Patient.new
-    allergy = @patient.allergies
-    immunization = @patient.immunizations
-    insu = @patient.insurances
-    problem = @patient.problems
-    procedure = @patient.procedures
-    result = @patient.results
-    medication = @patient.medications
-    @patient.id = Allergy.new
-    @allergy= @patient.allergies.build
+
+    
+    @patient.allergies.build
 
   end
 
@@ -39,7 +33,7 @@ class PatientsController < ApplicationController
   end
  def create
     @patient = Patient.new(params[:patient])
- @allergy = @patient.allergies.build(params[:allergy])
+
 
 
     respond_to do |format|
