@@ -19,7 +19,7 @@ Doctor::Application.routes.draw do
    resources  :hospitals
    resources  :patients
    resources  :enquiries
-   namespace :user do |user|
+   namespace  :user do |user|
        resources  :hospitals
     match '/dashboard'  => "home#new", :as => :root
    end

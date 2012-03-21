@@ -20,7 +20,7 @@
 <%= f.hidden_field :user_id, :value => current_user.id %>
 
  <h3> allergies</h3>
-	<%= f.fields_for :allergies do |f| %>
+	<%= f.fields_for :allergies, @allergy  do |f| %>
 	<%= render :partial =>'allergy',  :locals => { :f => f }%>
 	<% end %>
 <p><%= f.link_to_add "Add a allergy", :allergies %></p>

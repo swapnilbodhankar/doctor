@@ -9,8 +9,8 @@ class PatientsController < ApplicationController
     procedure = @patient.procedures
     result = @patient.results
     medication = @patient.medications
-    #@patient = Patient.find_by_user_id(params[:id])
-    #@patient.allergies.build
+    @patient.id = Allergy.new
+    @allergy= @patient.allergies.build
 
   end
 
@@ -39,6 +39,7 @@ class PatientsController < ApplicationController
   end
  def create
     @patient = Patient.new(params[:patient])
+ @allergy = @patient.allergies.build(params[:allergy])
 
 
     respond_to do |format|
