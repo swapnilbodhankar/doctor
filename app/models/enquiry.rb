@@ -4,5 +4,4 @@ class Enquiry < ActiveRecord::Base
   
   attr_accessible  :name,:email,:phone_no,:message,:docter_ids, :docter_id, :user_email
   
-  
-end
+  end
