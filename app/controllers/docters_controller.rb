@@ -22,9 +22,7 @@ class DoctersController < ApplicationController
     @docters = Docter.find_by_user_id(params[:id])
   
     @enquiries = Enquiry.find_by_id(params[:id])
-     @countries  = Country.find(:all)
-    @states = State.find(:all)
-    @cities   = City.find(:all)
+
   end
 
   def show
@@ -47,25 +45,5 @@ class DoctersController < ApplicationController
       end
     end
   end
-   def update_states
-    # updates artists and songs based on genre selected
-     country = Country.find(params[:country_id])
-    states = country.states
-    cities   = country.cities
-
-    render :update do |page|
-      page.replace_html 'states',  :partial => 'states', :object => states
-      page.replace_html 'cities',   :partial => 'cities',   :object => cities
-    end
-  end
-
-  def update_cities
-    # updates songs based on artist selected
-    state = State.find(params[:state_id])
-    cities  = state.cities
-
-    render :update do |page|
-      page.replace_html 'cities', :partial => 'cities', :object => cities
-    end
-  end
+ 
 end
