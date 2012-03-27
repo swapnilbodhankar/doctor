@@ -35,6 +35,6 @@
 </p>
 <p>
   <b>Category:</b>
-  <%= @docter.categories_ds.name  %>
+  <%= @docter.categories_ds.first.name%>
 </p>
 <%= render "enquiries/form", :object => @docter %>

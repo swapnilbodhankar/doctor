@@ -12,7 +12,7 @@
 <% @sub_categories_ds.each do |sub_categories_d| %>
   <tr>
     <td><%= sub_categories_d.name %></td>
-   <td><%= sub_categories_d.categories_ds.name%></td>
+   <td><%= sub_categories_d.categories_ds.first.name%></td>
     <td><%= link_to 'Show', sub_categories_d %></td>
     <td><%= link_to 'Edit', edit_sub_categories_d_path(sub_categories_d) %></td>
     <td><%= link_to 'Destroy', sub_categories_d, confirm: 'Are you sure?', method: :delete %></td>

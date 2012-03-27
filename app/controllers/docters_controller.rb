@@ -26,7 +26,7 @@ class DoctersController < ApplicationController
   end
 
   def show
-    @docter = Docter.find_by_user_id(params[:id])
+    @docter = Docter.find_by_id(params[:id])
     @enquiry = Enquiry.new
   end
 
